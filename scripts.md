@@ -17,6 +17,9 @@
     ng new angular-latest
     ```
 
+    * `Would you like to add Angular routing?` **y**
+    * `Which stylesheet format would you like to use?` **SCSS**
+
 # Manual
 
 ## Install latest angular versions
