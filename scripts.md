@@ -25,6 +25,6 @@
 ## Install latest angular versions
 
 ```sh
-npm install @angular/animations@next @angular/common@next @angular/compiler@next @angular/core@next @angular/forms@next @angular/platform-browser@next @angular/platform-browser-dynamic@next @angular/router@next @angular-devkit/build-angular@next @angular/cli@next @angular/compiler-cli@next
+npm install @angular/animations@next @angular/common@next @angular/compiler@next @angular/core@next @angular/forms@next @angular/platform-browser@next @angular/platform-browser-dynamic@next @angular/router@next @angular-devkit/build-angular@next @angular/cli@next @angular/compiler-cli@next --force
 
 ```
