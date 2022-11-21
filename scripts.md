@@ -8,7 +8,7 @@
 
 2. Install latest cli
     ```sh
-    npm install -g @angular/cli@14
+    npm install -g @angular/cli@15
     ```
 
 3. Go up a level and regenerate to the `angular-latest` dir:
@@ -25,7 +25,7 @@
 ## Install latest angular versions
 
 ```sh
-npm install @angular/animations@14 @angular/common@14 @angular/compiler@14 @angular/core@14 @angular/forms@14 @angular/platform-browser@14 @angular/platform-browser-dynamic@14 @angular/router@14 --save --force
-npm install @angular-devkit/build-angular@14 @angular/cli@14 @angular/compiler-cli@14 --save-dev --force
+npm install @angular/animations@15 @angular/common@15 @angular/compiler@15 @angular/core@15 @angular/forms@15 @angular/platform-browser@15 @angular/platform-browser-dynamic@15 @angular/router@15 --save --force
+npm install @angular-devkit/build-angular@15 @angular/cli@15 @angular/compiler-cli@15 --save-dev --force
 
 ```
