@@ -8,16 +8,16 @@
 
 2. Install latest cli
     ```sh
-    npm install -g @angular/cli@16
+    npm install -g @angular/cli@next
     ```
 
 3. Go up a level and regenerate to the `angular-latest` dir:
 
     ```sh
-    ng new angular-latest --standalone
+    ng new angular-latest
     ```
 
-    * `Would you like to add Angular routing?` **y**
+    * `Would you like to user SSR?` **N**
     * `Which stylesheet format would you like to use?` **SCSS**
 
 # Manual
@@ -25,7 +25,7 @@
 ## Install latest angular versions
 
 ```sh
-npm install @angular/animations@16 @angular/common@16 @angular/compiler@16 @angular/core@16 @angular/forms@16 @angular/platform-browser@16 @angular/platform-browser-dynamic@16 @angular/router@16 --save --force
-npm install @angular-devkit/build-angular@16 @angular/cli@16 @angular/compiler-cli@16 --save-dev --force
+npm install @angular/animations@next @angular/common@next @angular/compiler@next @angular/core@next @angular/forms@next @angular/platform-browser@next @angular/platform-browser-dynamic@next @angular/router@next  --save --force
+npm install @angular-devkit/build-angular@next @angular/cli@next @angular/compiler-cli@next --save-dev --force
 
 ```
