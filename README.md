@@ -1,10 +1,6 @@
 # AngularLatest
 
-<<<<<<< HEAD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0-next.6.
-=======
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
->>>>>>> origin/main
 
 ## Development server
 
