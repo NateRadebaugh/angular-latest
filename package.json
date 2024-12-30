@@ -2,11 +2,9 @@
   "name": "angular-latest",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build-with-maps": "ng build --source-map=true --verbose --named-chunks --stats-json=true",
+    "run-sonda": "node sonda.mjs",
+    "analyze": "sonda-angular"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +17,7 @@
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
     "rxjs": "~7.8.0",
+    "sonda": "https://pkg.pr.new/sonda@49",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
