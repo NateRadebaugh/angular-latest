@@ -19,6 +19,7 @@
     "rxjs": "~7.8.0",
     "sonda": "https://pkg.pr.new/sonda@49",
     "tslib": "^2.3.0",
+    "unplugin-sourcemaps": "https://pkg.pr.new/unplugin-sourcemaps@49",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
