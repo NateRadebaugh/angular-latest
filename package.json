@@ -2,6 +2,7 @@
   "name": "angular-latest",
   "version": "0.0.0",
   "scripts": {
+    "extract-i18n": "ng extract-i18n --output-path=src/locales --format=xlf",
     "build-with-maps": "ng build --source-map=true --verbose --named-chunks --stats-json=true",
     "run-sonda": "node sonda.mjs",
     "analyze": "sonda-angular"
@@ -26,6 +27,7 @@
     "@angular-devkit/build-angular": "^19.0.0",
     "@angular/cli": "^19.0.0",
     "@angular/compiler-cli": "^19.0.0",
+    "@angular/localize": "^19.0.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.4.0",
     "karma": "~6.4.0",
