@@ -14,5 +14,5 @@ jobs:
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           pattern: "./dist/**/*.{js,css,html,json}"
-          strip-hash: "\\b\\w{16}\\."
+          strip-hash: "\\b\\w{8}\\."
           compression: "none"
