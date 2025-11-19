@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * Post-build script to remove JavaScript from prerendered HTML files
- * This creates a truly static site without any client-side JavaScript
+ * Post-build script to remove render-blocking resources from prerendered HTML files
+ * This creates a truly static site without any client-side JavaScript and with fully inlined CSS
  */
 
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
@@ -27,6 +27,12 @@ function removeScriptTags(htmlContent) {
   return result;
 }
 
+function removeExternalStylesheets(htmlContent) {
+  // Remove external stylesheet links that would block rendering
+  // Angular already inlines critical CSS, so external stylesheets are redundant
+  return htmlContent.replace(/<link[^>]*rel=["']stylesheet["'][^>]*>/gi, '');
+}
+
 function processHtmlFiles(dir) {
   const files = readdirSync(dir);
   
@@ -40,13 +46,14 @@ function processHtmlFiles(dir) {
       // Skip the CSR fallback file
       console.log(`Processing ${filePath}...`);
       const content = readFileSync(filePath, 'utf8');
-      const cleanedContent = removeScriptTags(content);
+      let cleanedContent = removeScriptTags(content);
+      cleanedContent = removeExternalStylesheets(cleanedContent);
       writeFileSync(filePath, cleanedContent, 'utf8');
-      console.log(`✓ Removed JavaScript from ${filePath}`);
+      console.log(`✓ Removed render-blocking resources from ${filePath}`);
     }
   }
 }
 
-console.log('Removing JavaScript from prerendered HTML files...');
+console.log('Removing render-blocking resources from prerendered HTML files...');
 processHtmlFiles(distPath);
-console.log('✓ Done! Your static site is now JavaScript-free.');
+console.log('✓ Done! Your static site has no render-blocking resources.');
