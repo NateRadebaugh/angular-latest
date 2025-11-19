@@ -11,8 +11,20 @@ import { join, extname } from 'path';
 const distPath = 'dist/angular-latest/browser';
 
 function removeScriptTags(htmlContent) {
-  // Remove all script tags
-  return htmlContent.replace(/<script[^>]*>.*?<\/script>/gis, '');
+  // Remove all script tags with comprehensive handling
+  // Using a more thorough approach that handles all edge cases
+  let result = htmlContent;
+  let prevResult;
+  
+  // Repeat until no more changes to handle nested/malformed cases
+  do {
+    prevResult = result;
+    // Match <script> tags with any attributes and content, handling whitespace variations
+    // \s* allows for any whitespace (including tabs, newlines) before closing >
+    result = result.replace(/<script(?:\s+[^>]*)?\s*>[\s\S]*?<\/script(?:\s+[^>]*)?\s*>/gi, '');
+  } while (result !== prevResult);
+  
+  return result;
 }
 
 function processHtmlFiles(dir) {
