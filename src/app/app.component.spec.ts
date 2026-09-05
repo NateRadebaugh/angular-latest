@@ -28,4 +28,16 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-latest');
   });
+
+  it('should eagerly load the logo without shifting layout', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const logo = fixture.nativeElement.querySelector('.angular-logo') as HTMLImageElement;
+
+    expect(logo.getAttribute('src')).toBe('angular-logo.svg');
+    expect(logo.getAttribute('width')).toBe('147');
+    expect(logo.getAttribute('height')).toBe('36');
+    expect(logo.getAttribute('loading')).toBe('eager');
+    expect(logo.getAttribute('fetchpriority')).toBe('high');
+  });
 });
